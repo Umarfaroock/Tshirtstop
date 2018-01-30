@@ -2,8 +2,6 @@ package com.niit.DaoImpl;
 
 import java.util.List;
 
-
-
 import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
@@ -68,4 +66,22 @@ public class ProductDAOImpl implements ProductDAO {
 		productToDelete.setProductId(productId);
 		sessionFactory.getCurrentSession().delete(productToDelete);
 	}
+
+	public Product getBySupplierName(String suppliername) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	/*@Transactional
+	public Supplier getBySupplierName(String suppliername) {
+		String hql = "from Supplier where SupplierName ='" + suppliername + "'";
+		Query query = (Query) sessionFactory.getCurrentSession().createQuery(hql);
+		@SuppressWarnings("unchecked")
+		List<Supplier> listSupplier = (List<Supplier>) (query).list();
+
+		if (listSupplier != null && !listSupplier.isEmpty()) {
+			return listSupplier.get(0);
+		}
+		return null; */
 }
+

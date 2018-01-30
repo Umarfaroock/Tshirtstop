@@ -15,6 +15,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class User {
 
+
 @Id
 @Column(name="UserId")
 @GeneratedValue
@@ -30,7 +31,7 @@ private int contactNumber;
 
 private String address;
 
-//private Role role;
+private String role;
 
 private int zipcode;
 
@@ -103,13 +104,13 @@ public void setZipcode(int zipcode) {
 	this.zipcode = zipcode;
 }
 
-/*public Role getRole() {
+public String getRole() {
 	return role;
 }
 
-public void setRole(Role role) {
+public void setRole(String role) {
 	this.role = role;
-}*/
+}
 
 
 }
