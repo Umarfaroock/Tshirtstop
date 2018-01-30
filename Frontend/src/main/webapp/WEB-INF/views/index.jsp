@@ -155,7 +155,7 @@ img.logo {
 		</div>
 	</div>
 	<br>
-	<h2>EARLY BIRDS.......GRAP THIS DEAL</h2>
+	<h2>EARLY BIRDS.......GRAB THIS DEAL</h2>
 	<br>
 	<div class="container">
 		<div class="row">
@@ -234,6 +234,6 @@ img.logo {
 
 			<%@include file="/WEB-INF/views/Signup.jsp"%>
 		</c:when>
-		</c:choose>
+	</c:choose>
 </body>
 </html>

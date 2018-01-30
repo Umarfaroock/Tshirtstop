@@ -1,11 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>New Product</title>
-<style type="text/css">
+<title>New Category</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style type="text/css">
 body {
 	background-image: url("resources/images/bg/background.jpg");
 }
@@ -25,12 +32,12 @@ label{
 		var stock = document.getElementById('stock');
 		// Check each input in the order that it appears in the form!
 		
-					if (notEmpty(productname, "Product Name Should not be empty")) {
+					if (notEmpty(productname, "Prooduct Name Should not be empty")) {
 							if (isAlphabet(productname,
 									"Please enter only letters for Product Name")) {
 								if (notEmpty(productdescription,"Product Description Should not be empty")){
 								         if (isAlphabet(productdescription,
-								        "Please enter only letters for Album Description")) {
+								        "Please enter only letters for Product Description")) {
 								        	 if (notEmpty(category,"Category Should not be empty")){
 								        		 if(notEmpty(productname, "Product Name should not be empty")){
 								        	
@@ -98,11 +105,12 @@ label{
 		}
 	}
   </script>
-</head>
-<body>
+
+  </head>
+  <body>
 <br> <br> <br>
 <br> <br> <br>
-<form action="addProduct" class="form-horizontal" method="post" onsubmit="return formProduct()" enctype="multipart/form-data">
+<form action="addProduct" class="form-horizontal" method="post" onsubmit="return formProduct()" enctype="multipart/form-data" > 
   <div class="form-group">
     <label class="control-label col-sm-offset-2 col-sm-3" for="email">Product Name:</label>
     <div class="col-sm-3">
@@ -136,19 +144,19 @@ label{
     </div>
   </div>
     <div class="form-group">
-    <label class="control-label col-sm-offset-2 col-sm-3" for="password">Price:</label>
+    <label class="control-label col-sm-offset-2 col-sm-3" for="pwd">Price:</label>
     <div class="col-sm-3"> 
       <input type="text" class="form-control" name="Price" id="price" placeholder="Enter Price Amount" required>
     </div>
   </div>
       <div class="form-group">
-    <label class="control-label col-sm-offset-2 col-sm-3" for="password">Stock:</label>
+    <label class="control-label col-sm-offset-2 col-sm-3" for="passowrd">Stock:</label>
     <div class="col-sm-3"> 
       <input type="text" class="form-control" name="Stock" id="stock" placeholder="Enter Stock Number" required>
     </div>
   </div>
       <div class="form-group">
-    <label class="control-label col-sm-offset-2 col-sm-3" for="passowrd">Image:</label>
+    <label class="control-label col-sm-offset-2 col-sm-3" for="password">Image:</label>
     <div class="col-sm-3"> 
       <input type="file" class="form-control" name="file" id="file" placeholder="Enter Price Amount" required>
     </div>
@@ -161,6 +169,5 @@ label{
 </form>
 <br> <br> <br>
 <br> <br> <br>
-
-</body>
-</html>
+ </body>
+ </html>

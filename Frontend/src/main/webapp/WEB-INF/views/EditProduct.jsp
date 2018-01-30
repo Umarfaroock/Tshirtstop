@@ -1,3 +1,4 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -21,7 +22,7 @@ label{
 </head>
 <body>
 <script>
-function formProduct(){
+function formCategory(){
 	// Make quick references to our fields
 	
 	var productname = document.getElementById('productname');
@@ -64,9 +65,9 @@ function isAlphabet(elem, helperMsg) {
 </script>
 <br> <br> <br>
 <br> <br> <br>
-<form class="form-horizontal" action="ProductEdited" method="post" onsubmit="return formProduct()" enctype="multipart/form-data">
+<form class="form-horizontal" action="productEdited" method="post" onsubmit="return formCategory()"> <!-- enctype="multipart/form-data"> -->
   <div class="form-group">
-    <label class="control-label col-sm-offset-2 col-sm-3" for="email">Album ID:</label>
+    <label class="control-label col-sm-offset-2 col-sm-3" for="email">Product ID:</label>
     <div class="col-sm-3">
       <input type="text" class= "form-control" name="productId" value="${product.productId}" readonly="true">
     </div>
@@ -78,7 +79,7 @@ function isAlphabet(elem, helperMsg) {
     </div>
   </div>
   <div class="form-group">
-    <label class="control-label col-sm-offset-2 col-sm-3" for="password">Product Description :</label>
+    <label class="control-label col-sm-offset-2 col-sm-3" for="pwd">Album Description :</label>
     <div class="col-sm-3"> 
       <input type="text" class= "form-control" name="productDescription" value="${product.productDescription}">
     </div>
@@ -94,7 +95,7 @@ function isAlphabet(elem, helperMsg) {
     </div>
   </div>
       <div class="form-group">
-    <label class="control-label col-sm-offset-2 col-sm-3" for="pwd">Category:</label>
+    <label class="control-label col-sm-offset-2 col-sm-3" for="password">Category:</label>
     <div class="col-sm-3"> 
   <select class="form-control" name="Category" id="category">
     <option value="">Select Category</option>
@@ -104,7 +105,7 @@ function isAlphabet(elem, helperMsg) {
     </div>
   </div>
     <div class="form-group">
-    <label class="control-label col-sm-offset-2 col-sm-3" for="passowrd">Price:</label>
+    <label class="control-label col-sm-offset-2 col-sm-3" for="password">Price:</label>
     <div class="col-sm-3"> 
       <input type="text" class="form-control" name="Price" id="price" placeholder="Enter Price Amount" required>
     </div>

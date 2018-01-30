@@ -1,4 +1,4 @@
-package com.niit.controller;
+/*package com.niit.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,12 +15,12 @@ public class UserController {
 	@Autowired
 	private UserDAO userDAO;
 
-	/*
+	
 	 * @Autowired private RoleDAO roleDAO;
 	 * 
 	 * @Autowired private Role role;
-	 */
-
+	 
+ 
 	@RequestMapping("/addNewUser")
 	
 
@@ -35,3 +35,4 @@ public class UserController {
 
 	}
 }
+*/

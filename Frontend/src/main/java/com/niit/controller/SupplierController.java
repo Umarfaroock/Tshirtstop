@@ -57,7 +57,7 @@ public class SupplierController {
 		Supplier supplier = supplierDao.getBySupplierId(supplierId);
 		model.addAttribute("supplier", supplier);
 		model.addAttribute("editSupplierClicked", true);
-		return "Artist";
+		return "Supplier";
 		
 	}
 	@RequestMapping("supplierEdited")
